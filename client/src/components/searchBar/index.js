@@ -38,9 +38,11 @@ const SearchBar = ({ search, placeholder, searchValue, error, onChange }) => {
           <Search />
         </IconButton>
       </Paper>
-      <Typography className={classes.errorTxt} component="h6">
-        {error}
-      </Typography>
+      {error && (
+        <Typography className={classes.errorTxt} component="h6">
+          {error}
+        </Typography>
+      )}
     </Grid>
   );
 };

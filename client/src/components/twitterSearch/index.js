@@ -27,6 +27,8 @@ const TwitterSearch = () => {
   // handler for search
   const searchHandler = async () => {
     try {
+      // remove error state
+      setError(null);
       // create local variable of search value
       let value = searchValue;
 
@@ -47,7 +49,13 @@ const TwitterSearch = () => {
     }
   };
   return (
-    <Grid container justify="center" spacing={5} className={classes.root}>
+    <Grid
+      container
+      justify="center"
+      alignItems="flex-start"
+      spacing={5}
+      className={classes.root}
+    >
       <SearchBar
         placeholder="Search eg @smashreality"
         onChange={inputChangeHandler}
